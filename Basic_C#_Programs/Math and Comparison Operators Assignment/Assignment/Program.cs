@@ -23,16 +23,13 @@ class Program
         string weekStatusTwo = Console.ReadLine();
         float hoursPerWeekTwo = Convert.ToSingle(weekStatusTwo);
 
-        float weeksPerMonth = 4;
-        float monthsPerYear = 12;
+        float weeksPerYear = 52;
 
         float weeklySalaryOne = hourlyRateOne * hoursPerWeekOne;
-        float monthlySalaryOne = weeklySalaryOne * weeksPerMonth;
-        float annualSalaryOne = monthlySalaryOne * monthsPerYear;
+        float annualSalaryOne = weeksPerYear * weeklySalaryOne;
 
         float weeklySalaryTwo = hourlyRateTwo * hoursPerWeekTwo;
-        float monthlySalaryTwo = weeklySalaryTwo * weeksPerMonth;
-        float annualSalaryTwo = monthlySalaryTwo * monthsPerYear;
+        float annualSalaryTwo = weeksPerYear * weeklySalaryTwo;
 
         Console.WriteLine("Annual salary of Person 1: $" + annualSalaryOne);
         Console.WriteLine("Annual salary of Person 2: $" + annualSalaryTwo);

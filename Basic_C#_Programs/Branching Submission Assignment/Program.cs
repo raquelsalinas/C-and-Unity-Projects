@@ -18,29 +18,16 @@ class Program {
         string widthStatus = Console.ReadLine();
         int width = Convert.ToInt32(widthStatus);
 
-        if (width > 50)
-        {
-            Console.WriteLine("Package too big to be shipped via Package Express. Have a good day.");
-            Console.ReadLine();
-            return;
-        }
-
         Console.WriteLine("Please enter the package height:");
         string heightStatus = Console.ReadLine();
         int height = Convert.ToInt32(heightStatus);
 
-        if (height > 50)
-        {
-            Console.WriteLine("Package too big to be shipped via Package Express. Have a good day.");
-            Console.ReadLine();
-            return;
-        }
 
         Console.WriteLine("Please enter the package length:");
         string lengthStatus = Console.ReadLine();
         int length = Convert.ToInt32(lengthStatus);
 
-        if (length > 50)
+        if (length + width + height > 50)
         {
             Console.WriteLine("Package too big to be shipped via Package Express. Have a good day.");
             Console.ReadLine();

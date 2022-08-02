@@ -11,7 +11,7 @@ class Program {
         {
             Console.WriteLine("Package too heavy to be shipped via Package Express. Have a good day.");
             Console.ReadLine();
-            return;
+            Environment.Exit(0);
         }
 
         Console.WriteLine("Please enter package width:");
@@ -31,7 +31,7 @@ class Program {
         {
             Console.WriteLine("Package too big to be shipped via Package Express. Have a good day.");
             Console.ReadLine();
-            return;
+            Environment.Exit(0);
         }
 
         int firstTotal = width * height * length * weight;

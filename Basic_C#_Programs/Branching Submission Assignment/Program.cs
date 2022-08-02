@@ -27,11 +27,12 @@ class Program {
         string lengthStatus = Console.ReadLine();
         int length = Convert.ToInt32(lengthStatus);
 
-        if (length + width + height > 50)
-        {
+        if (length + width + height > 50) {
             Console.WriteLine("Package too big to be shipped via Package Express. Have a good day.");
             Console.ReadLine();
             Environment.Exit(0);
+        } else {
+            break;
         }
 
         int firstTotal = width * height * length * weight;

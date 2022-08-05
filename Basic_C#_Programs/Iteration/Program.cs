@@ -17,18 +17,21 @@ class Program
 
         int x = 0;
 
-        while (x <= Languages.Length)
+        while (x < Languages.Length)
         {
             Console.WriteLine(Languages[x] + userInput);
             x++;
         }
         Console.ReadLine();
-
+        
         //Part 2
-        while (true)
+        DateTime start = DateTime.Now;
+
+        while (DateTime.Now.Subtract(start).Seconds < 1)
         {
             Console.WriteLine("Hello, World!");
         }
+        Console.ReadLine();
 
         //Part 3
         for (int i = 0; i < 5; i++)
@@ -43,25 +46,31 @@ class Program
         }
         Console.ReadLine();
 
-        Part4:
+        //Part4
+        List<string> cities = new List<string>() { "Chicago", "New York", "Miami", "Boston", "Houston", "Phoenix", "Philadelphia", "San Antonio" };
+
         Console.WriteLine("Please write a the name of a big city in the United States:");
         string userCity = Console.ReadLine();
 
-        List<string> cities = new List<string>() { "Chicago", "New York", "Miami", "Boston", "Houston", "Phoenix", "Philadelphia", "San Antonio" };
+        bool matchIndex2 = false;
 
-        foreach (string city in cities)
+        for (int k = 0; k <= cities.Count; k++)
         {
-            if(city == userCity)
+            if (cities[k] == userCity)
             {
-                Console.WriteLine("You wrote, " + userCity + ", and that was in my list. Good job!");
+                matchIndex2 = true;
+                Console.WriteLine("That city appeared at the index: " + k + ".");
                 Console.ReadLine();
-                Environment.Exit(0);
-            } else
-            {
-                Console.WriteLine("Sorry, " + userCity + ", isn't in the list. Try again.");
-                goto Part4;
+                break;
             }
+
         }
+        if (matchIndex2 == false)
+        {
+            Console.WriteLine("Sorry, this city isn't in the list.");
+            Console.ReadLine();
+        }
+
         //Part 5
         List<string> names = new List<string>() { "Annie", "Bob", "Dean", "Dean" };
 
@@ -70,21 +79,20 @@ class Program
         
         bool matchIndex = false;
 
-        for (int c = 0; c <= names.Count; c++)
+        for (int c = 0; c < names.Count; c++)
         {
             if (names[c] == userName)
             {
                 matchIndex = true;
                 Console.WriteLine("That name appeared at the index: " + c + ".");
-                Console.ReadLine();
             }
 
         }
         if (matchIndex == false)
         {
             Console.WriteLine("Sorry, this name isn't in the list.");
-            Console.ReadLine();
         }
+        Console.ReadLine();
 
         //Part 6
         List<string> animals = new List<string>() { "Orca", "Lion", "Tiger", "Tiger" };
@@ -97,12 +105,13 @@ class Program
             if (!animals2.Contains(animal))
             {
                 animals2.Add(animal);
+                Console.WriteLine(animal + " is unique.");
             }
             else
             {
                 Console.WriteLine(animal + " has already showed up in the list.");
-                Console.ReadLine();
             }
         }
+        Console.ReadLine();
     }
 }

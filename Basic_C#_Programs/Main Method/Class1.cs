@@ -14,5 +14,17 @@ namespace Main_Method
             TotalA = a + 5;
             return TotalA;
         }
+        public int Math2(int a)
+        {
+            int TotalB;
+            TotalB = a - 5;
+            return TotalB;
+        }
+        public int Math3(int a)
+        {
+            int TotalC;
+            TotalC = a * 5;
+            return TotalC;
+        }
     }
 }

@@ -25,7 +25,7 @@ namespace Calling_Methods
         public int Multiply(int z)
         {
             int total3;
-            total3 = z + 5;
+            total3 = z * 5;
             return total3;
         }
     }

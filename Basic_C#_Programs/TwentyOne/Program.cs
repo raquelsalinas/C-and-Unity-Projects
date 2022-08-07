@@ -4,18 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CallingMethods
+namespace Calling_Methods
 {
     class Program
     {
-        public void Main(string[] args)
+        static void Main(string[] args)
         {
             Console.WriteLine("Please enter a number:");
             var userInput = Convert.ToInt32(Console.ReadLine());
 
-            Operations operation = new Operations();
+            Class1 myclass = new Class1();
 
-            Console.WriteLine(operation.Add(userInput), operation.Subtract(userInput), operation.Multiply(userInput));
+            Console.WriteLine(myclass.Add(userInput));
+            Console.WriteLine(myclass.Subtract(userInput));
+            Console.WriteLine(myclass.Multiply(userInput));
             Console.ReadLine();
         }   
     }

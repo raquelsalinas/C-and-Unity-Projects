@@ -14,16 +14,16 @@ namespace Main_Method
             TotalA = a + 5;
             return TotalA;
         }
-        public int Math2(int a)
+        public int Math(double b)
         {
-            int TotalB;
-            TotalB = a - 5;
-            return TotalB;
+            double TotalB;
+            TotalB = b - 5;
+            return Convert.ToInt32(TotalB);
         }
-        public int Math3(int a)
+        public int Math(string c)
         {
             int TotalC;
-            TotalC = a * 5;
+            TotalC = Convert.ToInt32(c) * 5;
             return TotalC;
         }
     }

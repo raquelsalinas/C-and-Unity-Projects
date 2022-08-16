@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 
 namespace Methods_and_Objects
 {
-    class Person
+    public abstract class Person
     {
         public string firstName;
         public string lastName;
 
-        public void SayName()
-        {
-            Console.WriteLine("Name: ");
-        }
+        public abstract void SayName();
+       
     }
 }

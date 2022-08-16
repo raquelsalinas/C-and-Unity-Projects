@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Methods_and_Objects
 {
-    class Employee : Person
+    public class Employee : Person
     {
-        int Id;
+        public override void SayName()
+        {
+            Console.WriteLine(firstName + " " + lastName);
+        }
     }
 }

@@ -17,6 +17,11 @@ namespace Methods_and_Objects
             myEmployee.SayName();
 
             Console.ReadLine();
+
+            iQuittable quit = new Employee();
+            quit.Quit();
+
+            Console.ReadLine();
         }
     }
 }

@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace Methods_and_Objects
 {
-    public abstract class Person
+    public class Person
     {
-        public string firstName;
-        public string lastName;
-
-        public abstract void SayName();
-       
+        public string firstName { get; set; }
+        public string lastName { get; set; }       
     }
 }

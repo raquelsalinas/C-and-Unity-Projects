@@ -6,16 +6,33 @@ using System.Threading.Tasks;
 
 namespace Methods_and_Objects
 {
-    public class Employee : Person, iQuittable
+    public class Employee
     {
-        public override void SayName()
+        public int Id { get; set; }
+
+        public static bool operator == (Employee myEmployee, Employee myEmployee2)
         {
-            Console.WriteLine(firstName + " " + lastName);
+            if (myEmployee == myEmployee2)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
-        public void Quit()
+        public static bool operator != (Employee myEmployee, Employee myEmployee2)
         {
-            Console.WriteLine("Hello, World!");
+            if (myEmployee != myEmployee2)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
+

@@ -10,17 +10,17 @@ namespace Methods_and_Objects
     {
         static void Main(string[] args)
         {
-            Employee myEmployee = new Employee();
+            Employee myEmployee = new Employee
+            {
+                Id = 001
+            };
 
-            myEmployee.firstName = "Sample";
-            myEmployee.lastName = "Student";
-            myEmployee.SayName();
+        Employee myEmployee2 = new Employee 
+            {
+                Id = 002
+            };
 
-            Console.ReadLine();
-
-            iQuittable quit = new Employee();
-            quit.Quit();
-
+            Console.WriteLine("Both employees have" + ((myEmployee == myEmployee2) ? "the same IDs" : "different IDs"));
             Console.ReadLine();
         }
     }

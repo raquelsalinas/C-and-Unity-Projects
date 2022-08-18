@@ -10,7 +10,6 @@ namespace Enums
     {
         public Days theDay { get; set; }
     }
-
         public enum Days
     {
         Sunday,

@@ -15,7 +15,7 @@ namespace Methods_and_Objects
                 Id = 001
             };
 
-        Employee myEmployee2 = new Employee 
+            Employee myEmployee2 = new Employee 
             {
                 Id = 002
             };

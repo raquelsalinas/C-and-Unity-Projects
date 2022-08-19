@@ -22,25 +22,28 @@ namespace Lambda
             employees.Add(new Employee() { firstName = "Maria", lastName = "Lopez", ID = 9 });
             employees.Add(new Employee() { firstName = "Justin", lastName = "Timberlake", ID = 10 });
 
-            List<Employee> employees2 = new List<Employee>();
-            foreach (Employee employee in employees)
+            foreach (var data in employees)
             {
-                if (employee.firstName == "Joe")
+                if (data.firstName == "Joe")
                 {
-                    employees2.Add(employee);
+                    Console.WriteLine("Joe's last name is {0} and ID number is {1}", data.lastName, data.ID);
                 }
             }
-            foreach (Employee employee in employees2)
+
+            List<Employee> employee2 = employees.Where(x => x.firstName == "Joe").ToList();
+            foreach (Employee employee in employee2)
             {
-                Console.WriteLine(employee.firstName);
+                Console.WriteLine(employee.firstName + " " + employee.lastName + " " + employee.ID);
             }
 
+            List<Employee> employee3 = employees.Where(x => x.ID > 5).ToList();
+            foreach (Employee employee in employee3)
+            {
+                Console.WriteLine("Employees with ID greater than 5:");
+                Console.WriteLine("{0} {1} ID:{2}", employee.firstName, employee.lastName, employee.ID);
 
-
-
-
-
-
+            }
+            Console.ReadLine();
         }
     }
 }

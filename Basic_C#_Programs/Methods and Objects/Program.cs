@@ -20,7 +20,7 @@ namespace Methods_and_Objects
                 Id = 002
             };
 
-            Console.WriteLine("Both employees have" + ((myEmployee == myEmployee2) ? "the same IDs" : "different IDs"));
+            Console.WriteLine("Both employees have " + ((myEmployee == myEmployee2) ? "the same IDs" : "different IDs"));
             Console.ReadLine();
         }
     }

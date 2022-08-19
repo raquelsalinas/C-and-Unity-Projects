@@ -12,7 +12,7 @@ namespace Methods_and_Objects
 
         public static bool operator == (Employee myEmployee, Employee myEmployee2)
         {
-            if (myEmployee == myEmployee2)
+            if (myEmployee.Id == myEmployee2.Id)
             {
                 return true;
             }
@@ -24,7 +24,7 @@ namespace Methods_and_Objects
 
         public static bool operator != (Employee myEmployee, Employee myEmployee2)
         {
-            if (myEmployee != myEmployee2)
+            if (myEmployee.Id != myEmployee2.Id)
             {
                 return true;
             }
@@ -33,7 +33,6 @@ namespace Methods_and_Objects
                 return false;
             }
         }
-        */
     }
 }
 
